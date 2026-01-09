@@ -71,15 +71,12 @@ export default function Button({
     );
   }
 
-  // Extract drag-related props to avoid type conflicts with Framer Motion
-  const { onDrag, onDragStart, onDragEnd, ...restProps } = props;
-  
   const motionProps: HTMLMotionProps<'button'> = {
     className: combinedClassName,
     disabled,
     whileHover: !disabled ? { scale: 1.02 } : undefined,
     whileTap: !disabled ? { scale: 0.98 } : undefined,
-    ...restProps,
+    ...props,
   };
 
   return (
