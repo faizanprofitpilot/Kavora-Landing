@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragStart' | 'onDragEnd'> {
   variant?: 'primary' | 'secondary' | 'white';
   href?: string;
   children: ReactNode;
@@ -71,14 +71,19 @@ export default function Button({
     );
   }
 
+  // Extract drag-related props to avoid type conflicts with Framer Motion
+  const { onDrag, onDragStart, onDragEnd, ...restProps } = props;
+  
+  const motionProps: HTMLMotionProps<'button'> = {
+    className: combinedClassName,
+    disabled,
+    whileHover: !disabled ? { scale: 1.02 } : undefined,
+    whileTap: !disabled ? { scale: 0.98 } : undefined,
+    ...restProps,
+  };
+
   return (
-    <motion.button
-      className={combinedClassName}
-      disabled={disabled}
-      whileHover={!disabled ? { scale: 1.02 } : {}}
-      whileTap={!disabled ? { scale: 0.98 } : {}}
-      {...props}
-    >
+    <motion.button {...motionProps}>
       {ButtonContent}
     </motion.button>
   );
