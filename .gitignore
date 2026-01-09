@@ -34,3 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+.pnpm-store/
+.next/
+node_modules/
+.pnpm-store/
+.next/
+node_modules/
