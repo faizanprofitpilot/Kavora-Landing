@@ -217,14 +217,14 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto mb-12">
+          <div className="max-w-4xl mx-auto mb-12">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-xl md:text-2xl text-[var(--foreground)] mb-6">
+              <p className="text-xl md:text-2xl text-[var(--foreground)] mb-6 text-center">
                 Kavora inserts a governed control plane between AI systems and the resources they interact with.
               </p>
               <div className="space-y-4 mb-6">
@@ -292,27 +292,10 @@ export default function Home() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg md:text-xl text-[var(--foreground)]"
+                className="text-lg md:text-xl text-[var(--foreground)] text-center"
               >
                 This approach mirrors how network security evolved from guidelines to firewalls.
               </motion.p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg"
-            >
-              <Image
-                src="/How it works visual.png"
-                alt="How It Works - Governed Control Plane"
-                width={1200}
-                height={600}
-                className="w-full h-auto object-contain"
-                priority
-              />
             </motion.div>
           </div>
         </Container>
