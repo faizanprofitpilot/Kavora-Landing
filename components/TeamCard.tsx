@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Linkedin, Twitter } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 import Badge from './Badge';
 import Card from './Card';
 
@@ -71,14 +71,24 @@ export default function TeamCard({
         <div className="flex items-center justify-center gap-4 pt-4 border-t border-[var(--border)]">
           <Link
             href={linkedinUrl}
-            className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--muted-foreground)] hover:opacity-80 transition-opacity"
             aria-label={`${name} on LinkedIn`}
           >
-            <Linkedin className="w-5 h-5" />
+            <Image
+              src="/Linkedin logo.png"
+              alt="LinkedIn"
+              width={20}
+              height={20}
+              className="w-5 h-5 object-contain"
+            />
           </Link>
           {twitterUrl && (
             <Link
               href={twitterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
               aria-label={`${name} on Twitter`}
             >

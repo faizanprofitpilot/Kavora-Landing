@@ -545,7 +545,7 @@ export default function Home() {
               humanDetail="His work is shaped by time spent in northern Pakistan, where he saw world-class talent emerging in highly remote conditions."
               headshot="/Christian headshot.png"
               badges={['Systems Architecture', 'Security Engineering', 'Microsoft Stack']}
-              linkedinUrl="#"
+              linkedinUrl="https://www.linkedin.com/in/christian-holslin-a4a15b1/"
               delay={0}
             />
             <TeamCard
@@ -555,7 +555,7 @@ export default function Home() {
               humanDetail="His approach to product-market fit is informed by years of analyzing how markets validate enterprise software adoption cycles."
               headshot="/Faizan headshot.png"
               badges={['Enterprise GTM', 'Product Strategy', 'AI-native SaaS']}
-              linkedinUrl="#"
+              linkedinUrl="https://www.linkedin.com/in/faizan-muhammad-973190108/"
               delay={0.2}
             />
           </div>
