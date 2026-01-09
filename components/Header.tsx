@@ -62,7 +62,7 @@ export default function Header() {
         }`}>
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
             <Image
-              src={scrolled ? "/Post scroll logo.png" : "/logo.png"}
+              src={scrolled ? "/Post%20scroll%20logo.png" : "/logo.png"}
               alt="Kavora"
               width={200}
               height={70}
