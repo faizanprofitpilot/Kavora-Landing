@@ -427,7 +427,7 @@ export default function Home() {
               title="Co-founder"
               bio="Christian is a systems and security-focused technologist with three decades of experience building and operating servers, services, and applications across and beyond the Microsoft ecosystem. He founded ShwaTech LLC in New York City in 2024 to expand the reach of his technical expertise and to create opportunity for aspiring engineers in Hunza, northern Pakistan. Christian leads Kavora's architecture and enforcement-layer design."
               humanDetail="His work is shaped by time spent in northern Pakistan, where he saw world-class talent emerging in highly remote conditions."
-              headshot="/Christian%20headshot.png"
+              headshot="/Christian headshot.png"
               badges={['Systems Architecture', 'Security Engineering', 'Microsoft Stack']}
               linkedinUrl="#"
               delay={0}
