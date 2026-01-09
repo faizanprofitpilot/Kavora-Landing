@@ -21,6 +21,9 @@ const config: Config = {
         'card-foreground': 'var(--card-foreground)',
         accent: 'var(--accent)',
       },
+      fontFamily: {
+        sans: ['var(--font-orbitron)', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],
