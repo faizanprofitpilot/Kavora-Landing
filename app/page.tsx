@@ -435,7 +435,7 @@ export default function Home() {
             <TeamCard
               name="Faizan Muhammad"
               title="Co-founder"
-              bio="Faizan is a product and go-to-market founder with a background in equity research and building AI-native SaaS products. He founded EchoSync AI, an AI-powered review marketing platform that was acquired in 2025, and previously led fundraising and growth initiatives at Eucalyptus Labs, scaling user base from zero to over 500,000 active devices. With five years of equity research experience at Seeking Alpha, he brings analytical rigor to enterprise customer discovery and product positioning. At Kavora, he leads GTM and product strategy."
+              bio="Faizan is a product and go-to-market founder with a background in equity research and building AI-native SaaS products. He founded EchoSync AI, an AI-powered review marketing platform acquired in 2025, and previously led fundraising and growth at Eucalyptus Labs, scaling from zero to over 500,000 active devices. With five years of equity research experience at Seeking Alpha, he brings analytical rigor to enterprise customer discovery. At Kavora, he leads GTM and product strategy."
               humanDetail="His approach to product-market fit is informed by years of analyzing how markets validate enterprise software adoption cycles."
               headshot="/Faizan headshot.png"
               badges={['Enterprise GTM', 'Product Strategy', 'AI-native SaaS']}
