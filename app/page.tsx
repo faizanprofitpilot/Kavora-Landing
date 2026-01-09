@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import Container from '@/components/Container';
@@ -48,6 +49,25 @@ export default function Home() {
             <p className="text-lg text-[var(--muted-foreground)] max-w-3xl mx-auto">
               Enterprises face growing risk from:
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12 max-w-5xl mx-auto"
+          >
+            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/The problem visual.png"
+                alt="The Problem - AI Governance Challenges"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
@@ -105,6 +125,25 @@ export default function Home() {
             <p className="text-lg text-white/90 max-w-3xl mx-auto drop-shadow-md">
               Instead of relying on frameworks, SDKs, or developer discipline, Kavora governs AI systems at the execution and egress layer, where real risk occurs.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12 max-w-5xl mx-auto"
+          >
+            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg border border-white/20">
+              <Image
+                src="/What kavora does visual.png"
+                alt="What Kavora Does - Runtime Enforcement Layer"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
@@ -169,6 +208,25 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-[var(--foreground)] max-w-3xl mx-auto">
               Kavora inserts a governed control plane between AI systems and the resources they interact with.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12 max-w-5xl mx-auto"
+          >
+            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/How it works visual.png"
+                alt="How It Works - Governed Control Plane"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
@@ -271,6 +329,25 @@ export default function Home() {
             </p>
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12 max-w-5xl mx-auto"
+          >
+            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg border border-white/20">
+              <Image
+                src="/Why this matters now visual.png"
+                alt="Why This Matters Now - AI Execution Risks"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <div className="max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <ul className="space-y-4">
@@ -319,6 +396,25 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
               Who Kavora Is For
             </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12 max-w-5xl mx-auto"
+          >
+            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/Who Kavora is for visual.png"
+                alt="Who Kavora Is For - Enterprise AI Leaders"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
@@ -437,7 +533,7 @@ export default function Home() {
               title="Co-founder"
               bio="Faizan is a product and go-to-market founder with a background in equity research and building AI-native SaaS products. He founded EchoSync AI, an AI-powered review marketing platform acquired in 2025, and previously led fundraising and growth at Eucalyptus Labs, scaling from zero to over 500,000 active devices. With five years of equity research experience at Seeking Alpha, he brings analytical rigor to enterprise customer discovery. At Kavora, he leads GTM and product strategy."
               humanDetail="His approach to product-market fit is informed by years of analyzing how markets validate enterprise software adoption cycles."
-              headshot="/Faizan%20headshot.png"
+              headshot="/Faizan headshot.png"
               badges={['Enterprise GTM', 'Product Strategy', 'AI-native SaaS']}
               linkedinUrl="#"
               delay={0.2}
