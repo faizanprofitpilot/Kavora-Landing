@@ -46,19 +46,58 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-[var(--muted-foreground)] mb-4 max-w-3xl mx-auto">
               AI governance today is mostly advisory.
             </p>
-            <p className="text-lg text-[var(--muted-foreground)] max-w-3xl mx-auto">
-              Enterprises face growing risk from:
-            </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 max-w-5xl mx-auto"
-          >
-            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-lg text-[var(--muted-foreground)] mb-6">
+                Enterprises face growing risk from:
+              </p>
+              <Card>
+                <ul className="space-y-4">
+                  {[
+                    'Internal AI agents acting without clear execution boundaries',
+                    'Vendor-hosted AI systems outside direct control',
+                    'No unified way to enforce which models, tools, or services AI can access',
+                    'Incomplete auditability when legal, security, or regulators ask what happened',
+                  ].map((item, index) => (
+                    <motion.li
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      className="flex items-start"
+                    >
+                      <AlertTriangle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-[var(--foreground)]">{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </Card>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg md:text-xl text-[var(--foreground)] font-semibold mt-8"
+              >
+                Policies exist. Enforcement does not.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg"
+            >
               <Image
                 src="/The problem visual.png"
                 alt="The Problem - AI Governance Challenges"
@@ -67,41 +106,7 @@ export default function Home() {
                 className="w-full h-auto object-contain"
                 priority
               />
-            </div>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card>
-              <ul className="space-y-4">
-                {[
-                  'Internal AI agents acting without clear execution boundaries',
-                  'Vendor-hosted AI systems outside direct control',
-                  'No unified way to enforce which models, tools, or services AI can access',
-                  'Incomplete auditability when legal, security, or regulators ask what happened',
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <AlertTriangle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-[var(--foreground)]">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </Card>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg md:text-xl text-[var(--foreground)] font-semibold mt-8 text-center"
-            >
-              Policies exist. Enforcement does not.
-            </motion.p>
+            </motion.div>
           </div>
         </Container>
       </Section>
@@ -122,19 +127,65 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto drop-shadow-md">
               Kavora provides a runtime enforcement layer for AI execution.
             </p>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto drop-shadow-md">
-              Instead of relying on frameworks, SDKs, or developer discipline, Kavora governs AI systems at the execution and egress layer, where real risk occurs.
-            </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 max-w-5xl mx-auto"
-          >
-            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg border border-white/20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-lg text-white/90 mb-6 drop-shadow-md">
+                Instead of relying on frameworks, SDKs, or developer discipline, Kavora governs AI systems at the execution and egress layer, where real risk occurs.
+              </p>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <p className="text-lg text-white mb-6 font-medium drop-shadow-md">
+                  With Kavora, organizations can:
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    { icon: Shield, text: 'Enforce which models and tools AI systems are allowed to use' },
+                    { icon: Lock, text: 'Govern AI behavior across internal and third-party environments' },
+                    { icon: Code, text: 'Apply centralized policy at runtime without rewriting agent code' },
+                    { icon: FileText, text: 'Maintain a complete audit trail of AI execution paths' },
+                    { icon: Zap, text: 'Confidently shut off or restrict AI behavior when risk changes' },
+                  ].map((item, index) => {
+                    const Icon = item.icon;
+                    return (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className="flex items-start"
+                      >
+                        <Icon className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-white drop-shadow-sm">{item.text}</span>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
+              </Card>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="text-lg md:text-xl text-white mt-8 drop-shadow-md"
+              >
+                Kavora treats AI like any other critical workload: governed, observable, and controllable.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg border border-white/20"
+            >
               <Image
                 src="/What kavora does visual.png"
                 alt="What Kavora Does - Runtime Enforcement Layer"
@@ -143,48 +194,7 @@ export default function Home() {
                 className="w-full h-auto object-contain"
                 priority
               />
-            </div>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <p className="text-lg text-white mb-6 font-medium drop-shadow-md">
-                With Kavora, organizations can:
-              </p>
-              <ul className="space-y-4">
-                {[
-                  { icon: Shield, text: 'Enforce which models and tools AI systems are allowed to use' },
-                  { icon: Lock, text: 'Govern AI behavior across internal and third-party environments' },
-                  { icon: Code, text: 'Apply centralized policy at runtime without rewriting agent code' },
-                  { icon: FileText, text: 'Maintain a complete audit trail of AI execution paths' },
-                  { icon: Zap, text: 'Confidently shut off or restrict AI behavior when risk changes' },
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="flex items-start"
-                    >
-                      <Icon className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-white drop-shadow-sm">{item.text}</span>
-                    </motion.li>
-                  );
-                })}
-              </ul>
-            </Card>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-lg md:text-xl text-white mt-8 text-center max-w-3xl mx-auto drop-shadow-md"
-            >
-              Kavora treats AI like any other critical workload: governed, observable, and controllable.
-            </motion.p>
+            </motion.div>
           </div>
         </Container>
       </Section>
@@ -205,19 +215,96 @@ export default function Home() {
             <p className="text-sm text-[var(--muted-foreground)] mb-6 italic">
               (Conceptually)
             </p>
-            <p className="text-xl md:text-2xl text-[var(--foreground)] max-w-3xl mx-auto">
-              Kavora inserts a governed control plane between AI systems and the resources they interact with.
-            </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 max-w-5xl mx-auto"
-          >
-            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-xl md:text-2xl text-[var(--foreground)] mb-6">
+                Kavora inserts a governed control plane between AI systems and the resources they interact with.
+              </p>
+              <div className="space-y-4 mb-6">
+                {[
+                  {
+                    step: '1',
+                    icon: Network,
+                    title: 'Controlled boundary',
+                    description: 'AI agents operate within a controlled execution boundary',
+                  },
+                  {
+                    step: '2',
+                    icon: Shield,
+                    title: 'Policy mediation',
+                    description: 'Outbound calls to models, tools, and services are mediated by policy',
+                  },
+                  {
+                    step: '3',
+                    icon: FileText,
+                    title: 'Audit + investigation',
+                    description: 'All activity is logged for audit, investigation, and compliance',
+                  },
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                    >
+                      <Card variant="feature" delay={index * 0.1}>
+                        <div className="flex items-start">
+                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--primary)] to-blue-700 flex items-center justify-center mr-4 flex-shrink-0">
+                            <Icon className="w-6 h-6 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="text-sm font-semibold text-[var(--primary)] mb-1">
+                              STEP {item.step}
+                            </div>
+                            <h3 className="text-lg font-bold text-[var(--foreground)] mb-2">
+                              {item.title}
+                            </h3>
+                            <p className="text-sm text-[var(--muted-foreground)]">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </Card>
+                    </motion.div>
+                  );
+                })}
+              </div>
+              <Card className="mb-6">
+                <div className="flex items-start">
+                  <CheckCircle2 className="w-5 h-5 text-[var(--primary)] mr-3 mt-0.5 flex-shrink-0" />
+                  <p className="text-[var(--foreground)]">
+                    Unauthorized actions are blocked or safely degraded
+                  </p>
+                </div>
+              </Card>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-lg md:text-xl text-[var(--foreground)]"
+              >
+                This approach mirrors how network security evolved from guidelines to firewalls.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg"
+            >
               <Image
                 src="/How it works visual.png"
                 alt="How It Works - Governed Control Plane"
@@ -226,85 +313,8 @@ export default function Home() {
                 className="w-full h-auto object-contain"
                 priority
               />
-            </div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            {[
-              {
-                step: '1',
-                icon: Network,
-                title: 'Controlled boundary',
-                description: 'AI agents operate within a controlled execution boundary',
-              },
-              {
-                step: '2',
-                icon: Shield,
-                title: 'Policy mediation',
-                description: 'Outbound calls to models, tools, and services are mediated by policy',
-              },
-              {
-                step: '3',
-                icon: FileText,
-                title: 'Audit + investigation',
-                description: 'All activity is logged for audit, investigation, and compliance',
-              },
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                >
-                  <Card variant="feature" delay={index * 0.1}>
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[var(--primary)] to-blue-700 flex items-center justify-center mx-auto mb-4">
-                        <Icon className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="text-sm font-semibold text-[var(--primary)] mb-2">
-                        STEP {item.step}
-                      </div>
-                      <h3 className="text-xl font-bold text-[var(--foreground)] mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-[var(--muted-foreground)]">
-                        {item.description}
-                      </p>
-                    </div>
-                  </Card>
-                </motion.div>
-              );
-            })}
+            </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="max-w-4xl mx-auto"
-          >
-            <Card>
-              <div className="flex items-start">
-                <CheckCircle2 className="w-5 h-5 text-[var(--primary)] mr-3 mt-0.5 flex-shrink-0" />
-                <p className="text-[var(--foreground)]">
-                  Unauthorized actions are blocked or safely degraded
-                </p>
-              </div>
-            </Card>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-lg md:text-xl text-[var(--foreground)] mt-8 text-center max-w-3xl mx-auto"
-            >
-              This approach mirrors how network security evolved from guidelines to firewalls.
-            </motion.p>
-          </motion.div>
         </Container>
       </Section>
 
@@ -324,19 +334,57 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto drop-shadow-md">
               AI systems are moving from decision support to autonomous execution.
             </p>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto drop-shadow-md">
-              That shift creates new enterprise risk:
-            </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 max-w-5xl mx-auto"
-          >
-            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg border border-white/20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-lg text-white/90 mb-6 drop-shadow-md">
+                That shift creates new enterprise risk:
+              </p>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+                <ul className="space-y-4">
+                  {[
+                    'Execution without approval',
+                    'Data movement without visibility',
+                    'Vendor AI without enforceable constraints',
+                  ].map((item, index) => (
+                    <motion.li
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      className="flex items-start"
+                    >
+                      <AlertTriangle className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-white">{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </Card>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-lg md:text-xl text-white mt-8 drop-shadow-md"
+              >
+                Organizations need governance that works after deployment, not just before.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg border border-white/20"
+            >
               <Image
                 src="/Why this matters now visual.png"
                 alt="Why This Matters Now - AI Execution Risks"
@@ -345,40 +393,7 @@ export default function Home() {
                 className="w-full h-auto object-contain"
                 priority
               />
-            </div>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <ul className="space-y-4">
-                {[
-                  'Execution without approval',
-                  'Data movement without visibility',
-                  'Vendor AI without enforceable constraints',
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <AlertTriangle className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </Card>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg md:text-xl text-white mt-8 text-center max-w-3xl mx-auto drop-shadow-md"
-            >
-              Organizations need governance that works after deployment, not just before.
-            </motion.p>
+            </motion.div>
           </div>
         </Container>
       </Section>
@@ -398,14 +413,48 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 max-w-5xl mx-auto"
-          >
-            <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card>
+                <div className="space-y-4">
+                  {[
+                    { icon: Building2, text: 'CIOs responsible for enterprise AI strategy' },
+                    { icon: Shield, text: 'CISOs managing AI-driven risk' },
+                    { icon: Target, text: 'Responsible AI and governance leaders' },
+                    { icon: Users, text: 'Security and platform teams supporting AI adoption' },
+                    { icon: Briefcase, text: 'Enterprises deploying internal agents or vendor-hosted AI' },
+                  ].map((item, index) => {
+                    const Icon = item.icon;
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className="flex items-start"
+                      >
+                        <Icon className="w-5 h-5 text-[var(--primary)] mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-[var(--foreground)]">{item.text}</span>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg"
+            >
               <Image
                 src="/Who Kavora is for visual.png"
                 alt="Who Kavora Is For - Enterprise AI Leaders"
@@ -414,36 +463,7 @@ export default function Home() {
                 className="w-full h-auto object-contain"
                 priority
               />
-            </div>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { icon: Building2, text: 'CIOs responsible for enterprise AI strategy' },
-                  { icon: Shield, text: 'CISOs managing AI-driven risk' },
-                  { icon: Target, text: 'Responsible AI and governance leaders' },
-                  { icon: Users, text: 'Security and platform teams supporting AI adoption' },
-                  { icon: Briefcase, text: 'Enterprises deploying internal agents or vendor-hosted AI', span: 2 },
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className={`flex items-start ${item.span === 2 ? 'md:col-span-2' : ''}`}
-                    >
-                      <Icon className="w-5 h-5 text-[var(--primary)] mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-900 drop-shadow-sm">{item.text}</span>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </Card>
+            </motion.div>
           </div>
         </Container>
       </Section>

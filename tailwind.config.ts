@@ -22,7 +22,8 @@ const config: Config = {
         accent: 'var(--accent)',
       },
       fontFamily: {
-        sans: ['var(--font-orbitron)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        orbitron: ['var(--font-orbitron)', 'sans-serif'],
       },
     },
   },
