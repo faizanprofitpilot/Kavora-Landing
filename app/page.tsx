@@ -578,7 +578,7 @@ export default function Home() {
                   Active Development
                 </h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-4 mb-8">
                 {[
                   'Internal AI agents',
                   'Vendor-hosted AI systems',
@@ -597,6 +597,21 @@ export default function Home() {
                   </motion.li>
                 ))}
               </ul>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="relative w-full h-auto rounded-3xl overflow-hidden"
+              >
+                <Image
+                  src="/Status visual.gif"
+                  alt="Status - Active Development"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                />
+              </motion.div>
             </motion.div>
           </div>
         </Container>
@@ -612,7 +627,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 whitespace-nowrap text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 whitespace-nowrap text-center mx-auto">
               Interested in governing AI at runtime?
             </h2>
             <p className="text-lg md:text-xl text-[var(--muted-foreground)] mb-8">
