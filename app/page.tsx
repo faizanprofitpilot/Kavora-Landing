@@ -121,10 +121,10 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
-              What Kavora Does
+              Control AI at Runtime
             </h2>
             <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto drop-shadow-md">
-              Kavora provides a runtime enforcement layer for AI execution.
+              Kavora enforces policy, access, and auditability at AI execution time, not just at design or review.
             </p>
           </motion.div>
 
@@ -135,8 +135,11 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <p className="text-lg text-white/90 mb-4 drop-shadow-md">
+                Most AI governance stops at design reviews, SDKs, and policy documents. Once AI is deployed, enforcement disappears.
+              </p>
               <p className="text-lg text-white/90 mb-6 drop-shadow-md">
-                Instead of relying on frameworks, SDKs, or developer discipline, Kavora governs AI systems at the execution and egress layer, where real risk occurs.
+                Kavora governs AI systems at execution and egress, where real risk occurs.
               </p>
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <p className="text-lg text-white mb-6 font-medium drop-shadow-md">
@@ -144,11 +147,11 @@ export default function Home() {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    { icon: Shield, text: 'Enforce which models and tools AI systems are allowed to use' },
-                    { icon: Lock, text: 'Govern AI behavior across internal and third-party environments' },
-                    { icon: Code, text: 'Apply centralized policy at runtime without rewriting agent code' },
-                    { icon: FileText, text: 'Maintain a complete audit trail of AI execution paths' },
-                    { icon: Zap, text: 'Confidently shut off or restrict AI behavior when risk changes' },
+                    { icon: Shield, text: 'Control which models, tools, and vendors AI can access at runtime' },
+                    { icon: Lock, text: 'Enforce policy consistently across internal agents and third-party AI systems' },
+                    { icon: Code, text: 'Change AI behavior instantly without redeploying or rewriting code' },
+                    { icon: FileText, text: 'Produce a complete, immutable audit trail of every AI decision and action' },
+                    { icon: Zap, text: 'Pause, restrict, or terminate AI execution when risk conditions change' },
                   ].map((item, index) => {
                     const Icon = item.icon;
                     return (
@@ -174,7 +177,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="text-lg md:text-xl text-white mt-8 drop-shadow-md"
               >
-                Kavora treats AI like any other critical workload: governed, observable, and controllable.
+                Kavora treats AI like production infrastructure, not an experiment.
               </motion.p>
             </motion.div>
 
@@ -183,16 +186,20 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg border border-white/20"
             >
-              <Image
-                src="/What kavora does visual.png"
-                alt="What Kavora Does - Runtime Enforcement Layer"
-                width={1200}
-                height={600}
-                className="w-full h-auto object-contain"
-                priority
-              />
+              <div className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg border border-white/20 mb-4">
+                <Image
+                  src="/What kavora does visual.png"
+                  alt="What Kavora Does - Runtime Enforcement Layer"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
+              <p className="text-sm text-white/70 text-center drop-shadow-sm">
+                All AI execution passes through Kavora before reaching models, tools, or external systems.
+              </p>
             </motion.div>
           </div>
         </Container>
