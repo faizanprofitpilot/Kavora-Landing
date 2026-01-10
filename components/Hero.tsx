@@ -118,14 +118,14 @@ export default function Hero() {
       )}
 
       <Container className="relative z-10 pt-16 md:pt-20 pb-8 md:pb-12">
-        <div className="text-center max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 drop-shadow-lg"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 drop-shadow-lg break-words"
           >
-            <span className="shiny-blue font-orbitron" data-text="Runtime Governance for Enterprise AI">
+            <span className="shiny-blue font-orbitron inline-block" data-text="Runtime Governance for Enterprise AI">
               Runtime Governance for Enterprise AI
             </span>
           </motion.h1>
@@ -134,9 +134,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm md:text-base lg:text-lg font-semibold text-white mb-8 mx-auto leading-tight drop-shadow-md max-w-4xl px-4"
+            className="text-sm md:text-base lg:text-lg font-semibold text-white mb-8 mx-auto leading-tight drop-shadow-md max-w-6xl px-4 sm:px-6 md:px-8"
           >
-            <div className="overflow-hidden md:whitespace-nowrap">
+            <div className="md:whitespace-nowrap">
               <TypingText 
                 text="Responsible AI fails when policy stops at paper. Kavora makes AI governance enforceable at runtime."
                 delay={0.3}
