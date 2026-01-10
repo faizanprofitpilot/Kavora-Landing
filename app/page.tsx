@@ -113,45 +113,36 @@ export default function Home() {
       {/* What Kavora Does Section */}
       <Section id="product" variant="image" withDivider>
         <Container>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
-              Control AI at Runtime
-            </h2>
-            <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto drop-shadow-md">
-              Kavora enforces policy, access, and auditability at AI execution time, not just at design or review.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6 }}
+              className="text-center space-y-3 mb-10 md:mb-12"
             >
-              <p className="text-lg text-white/90 mb-4 drop-shadow-md">
-                Most AI governance stops at design reviews, SDKs, and policy documents. Once AI is deployed, enforcement disappears.
+              <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+                Control AI at Runtime
+              </h2>
+              <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto drop-shadow-md">
+                Enforce policy, access, and auditability at execution time.
               </p>
-              <p className="text-lg text-white/90 mb-6 drop-shadow-md">
-                Kavora governs AI systems at execution and egress, where real risk occurs.
+              <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+                Govern every agent action before it reaches models, tools, or vendors.
               </p>
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                <p className="text-lg text-white mb-6 font-medium drop-shadow-md">
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-start">
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 md:p-8" delay={0}>
+                <p className="text-sm font-medium text-white/90 mb-5 drop-shadow-sm">
                   With Kavora, organizations can:
                 </p>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {[
-                    { icon: Shield, text: 'Control which models, tools, and vendors AI can access at runtime' },
-                    { icon: Lock, text: 'Enforce policy consistently across internal agents and third-party AI systems' },
-                    { icon: Code, text: 'Change AI behavior instantly without redeploying or rewriting code' },
-                    { icon: FileText, text: 'Produce a complete, immutable audit trail of every AI decision and action' },
-                    { icon: Zap, text: 'Pause, restrict, or terminate AI execution when risk conditions change' },
+                    { icon: Shield, text: 'Control model and tool access' },
+                    { icon: Lock, text: 'Enforce policy across agents and vendors' },
+                    { icon: Code, text: 'Change behavior without redeploys' },
+                    { icon: FileText, text: 'Capture an immutable audit trail' },
                   ].map((item, index) => {
                     const Icon = item.icon;
                     return (
@@ -163,44 +154,45 @@ export default function Home() {
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         className="flex items-start"
                       >
-                        <Icon className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-white drop-shadow-sm">{item.text}</span>
+                        <Icon className="w-4 h-4 text-white mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-white drop-shadow-sm text-sm md:text-base leading-relaxed">{item.text}</span>
                       </motion.li>
                     );
                   })}
                 </ul>
               </Card>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-lg md:text-xl text-white mt-8 drop-shadow-md"
-              >
-                Kavora treats AI like production infrastructure, not an experiment.
-              </motion.p>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg border border-white/20">
+                  <Image
+                    src="/What kavora does visual.png"
+                    alt="What Kavora Does - Runtime Enforcement Layer"
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto object-contain"
+                    priority
+                  />
+                </div>
+                <p className="text-xs text-white/70 text-center mt-3 drop-shadow-sm">
+                  All AI execution passes through Kavora first.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-sm text-white/80 mt-8 md:mt-10 text-center drop-shadow-sm"
             >
-              <div className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg border border-white/20 mb-4">
-                <Image
-                  src="/What kavora does visual.png"
-                  alt="What Kavora Does - Runtime Enforcement Layer"
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
-              </div>
-              <p className="text-sm text-white/70 text-center drop-shadow-sm">
-                All AI execution passes through Kavora before reaching models, tools, or external systems.
-              </p>
-            </motion.div>
+              Kavora treats AI like production infrastructure, not an experiment.
+            </motion.p>
           </div>
         </Container>
       </Section>
@@ -540,7 +532,7 @@ export default function Home() {
             <TeamCard
               name="Faizan Muhammad"
               title="Co-founder"
-              bio="Faizan is a product and go-to-market founder with a background in equity research and building AI-native SaaS products. He founded EchoSync AI, an AI-powered review marketing platform acquired in 2025, and previously led fundraising and growth at Eucalyptus Labs, scaling from zero to over 500,000 active devices. With five years of equity research experience at Seeking Alpha, he brings analytical rigor to enterprise customer discovery. At Kavora, he leads GTM and product strategy."
+              bio="Faizan is a product and go-to-market founder with a background in equity research and building AI-native SaaS products. He founded EchoSync AI, an AI-powered review marketing platform acquired in 2024, and previously led fundraising and growth at Eucalyptus Labs, scaling from zero to over 500,000 active devices. With five years of equity research experience at Seeking Alpha, he brings analytical rigor to enterprise customer discovery. At Kavora, he leads GTM and product strategy."
               humanDetail="His approach to product-market fit is informed by years of analyzing how markets validate enterprise software adoption cycles."
               headshot="/Faizan headshot.png"
               badges={['Enterprise GTM', 'Product Strategy', 'AI-native SaaS']}

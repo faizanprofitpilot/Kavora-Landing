@@ -32,18 +32,32 @@ export default function TeamCard({
   return (
     <Card className="h-full flex flex-col" delay={delay}>
         <div className="flex flex-col items-center text-center mb-6">
-          <div className="relative w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-[var(--border)] shadow-md">
+          <Link
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-[var(--border)] shadow-md hover:shadow-lg hover:border-[var(--primary)]/50 transition-all cursor-pointer group"
+            aria-label={`${name} on LinkedIn`}
+          >
             <Image
               src={headshot}
               alt={name}
               width={128}
               height={128}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
-          </div>
-          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
-            {name}
-          </h3>
+          </Link>
+          <Link
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[var(--primary)] transition-colors"
+            aria-label={`${name} on LinkedIn`}
+          >
+            <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
+              {name}
+            </h3>
+          </Link>
           <p className="text-sm font-medium text-[var(--muted-foreground)] mb-4">
             {title}
           </p>
