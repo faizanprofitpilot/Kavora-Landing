@@ -612,7 +612,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 whitespace-nowrap">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 whitespace-nowrap text-center">
               Interested in governing AI at runtime?
             </h2>
             <p className="text-lg md:text-xl text-[var(--muted-foreground)] mb-8">
