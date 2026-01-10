@@ -132,7 +132,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
               <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 md:p-8" delay={0}>
                 <p className="text-sm font-medium text-white/90 mb-5 drop-shadow-sm">
                   With Kavora, organizations can:
