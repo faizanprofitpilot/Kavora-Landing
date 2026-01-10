@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Calendar } from 'lucide-react';
 import Button from './Button';
 
 export default function Header() {
@@ -131,14 +132,16 @@ export default function Header() {
 
           <div className="hidden md:flex flex-shrink-0">
             <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-              Talk to Sales
+              <Calendar className="w-4 h-4 mr-2" />
+              Have a Conversation
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto">
             <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-              Talk to Sales
+              <Calendar className="w-4 h-4 mr-2" />
+              Have a Conversation
             </Button>
           </div>
         </div>

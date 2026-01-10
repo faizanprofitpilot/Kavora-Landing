@@ -23,6 +23,7 @@ import {
   Briefcase,
   Network,
   Activity,
+  Calendar,
 } from 'lucide-react';
 
 export default function Home() {
@@ -634,7 +635,8 @@ export default function Home() {
               We are scheduling conversations with enterprise leaders exploring AI governance, security, and responsible deployment.
             </p>
             <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-              Talk to Sales
+              <Calendar className="w-4 h-4 mr-2" />
+              Have a Conversation
             </Button>
           </motion.div>
         </Container>

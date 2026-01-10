@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Button from './Button';
 import Card from './Card';
 import Container from './Container';
-import { Shield, Lock, FileText } from 'lucide-react';
+import { Shield, Lock, FileText, Calendar, Mail } from 'lucide-react';
 
 function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
   const [displayedText, setDisplayedText] = useState('');
@@ -160,9 +160,11 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-              Talk to Sales
+              <Calendar className="w-4 h-4 mr-2" />
+              Have a Conversation
             </Button>
             <Button href="mailto:faizan@shwatech.com?subject=Inquiry about Kavora" variant="white">
+              <Mail className="w-4 h-4 mr-2" />
               Get in Touch
             </Button>
           </motion.div>

@@ -112,7 +112,7 @@ export default function ContactPage() {
           className="text-center mb-12 max-w-3xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-4">
-            Talk to Sales
+            Have a Conversation
           </h1>
           <p className="text-lg text-[var(--muted-foreground)]">
             Tell us a bit about your environment and what you are trying to govern. We will respond within 1 business day.

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Calendar } from 'lucide-react';
 import Button from './Button';
 import Container from './Container';
 
@@ -27,7 +28,8 @@ export default function Footer() {
             
             <div className="flex justify-center md:justify-end">
               <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-                Talk to Sales
+                <Calendar className="w-4 h-4 mr-2" />
+                Have a Conversation
               </Button>
             </div>
           </div>
