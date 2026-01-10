@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   title: 'Kavora - Runtime Governance for Enterprise AI',
   description: 'Responsible AI fails when policy stops at paper. Kavora makes AI governance enforceable at runtime.',
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
   openGraph: {
     title: 'Kavora - Runtime Governance for Enterprise AI',
