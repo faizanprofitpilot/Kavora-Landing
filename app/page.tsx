@@ -96,7 +96,6 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full h-auto rounded-3xl overflow-hidden shadow-lg"
             >
               <Image
                 src="/The problem visual.png"
@@ -572,7 +571,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl border-2 border-[var(--primary)]/20 bg-gradient-to-br from-[var(--primary)]/5 to-blue-50/50 p-8 md:p-12 shadow-lg shadow-[var(--primary)]/10"
+              className="rounded-2xl border-2 border-[var(--primary)]/30 bg-white p-8 md:p-12 shadow-lg shadow-[var(--primary)]/20"
             >
               <div className="flex items-center justify-center mb-6">
                 <Activity className="w-8 h-8 text-[var(--primary)] mr-3" />
@@ -592,7 +591,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-center"
+                    className="flex items-center justify-center"
                   >
                     <CheckCircle2 className="w-5 h-5 text-[var(--primary)] mr-3 flex-shrink-0" />
                     <span className="text-[var(--foreground)]">{item}</span>
@@ -614,7 +613,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 whitespace-nowrap">
               Interested in governing AI at runtime?
             </h2>
             <p className="text-lg md:text-xl text-[var(--muted-foreground)] mb-8">
