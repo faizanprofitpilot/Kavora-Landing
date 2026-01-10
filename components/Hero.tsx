@@ -136,7 +136,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm md:text-base lg:text-lg font-semibold text-white mb-8 mx-auto leading-tight drop-shadow-md max-w-4xl px-4"
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden md:whitespace-nowrap">
               <TypingText 
                 text="Responsible AI fails when policy stops at paper. Kavora makes AI governance enforceable at runtime."
                 delay={0.3}
