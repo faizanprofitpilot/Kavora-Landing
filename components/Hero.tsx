@@ -125,7 +125,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 drop-shadow-lg break-words"
           >
-            <span className="text-white font-orbitron inline-block" data-text="Runtime Governance for Enterprise AI">
+            <span className="text-gray-300 font-orbitron inline-block" data-text="Runtime Governance for Enterprise AI">
               Runtime Governance for Enterprise AI
             </span>
           </motion.h1>
