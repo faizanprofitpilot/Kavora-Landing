@@ -26,7 +26,7 @@ export default function Button({
   
   const variantStyles = {
     primary:
-      'bg-gradient-to-r from-[var(--primary)] to-blue-700 text-white hover:shadow-lg hover:shadow-[var(--primary)]/25 hover:-translate-y-0.5 focus:ring-[var(--ring)] relative overflow-hidden group',
+      'bg-gradient-to-r from-[var(--primary)] to-[#152030] text-white hover:shadow-lg hover:shadow-[var(--primary)]/25 hover:-translate-y-0.5 focus:ring-[var(--ring)] relative overflow-hidden group',
     secondary:
       'bg-transparent text-[var(--foreground)] border-2 border-[var(--border)] hover:bg-[var(--muted)] hover:border-[var(--foreground)]/20 focus:ring-[var(--ring)]',
     white:

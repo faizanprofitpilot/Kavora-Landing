@@ -8,7 +8,7 @@ export default function NotFound() {
         </p>
         <a
           href="/"
-          className="inline-block px-6 py-3 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="inline-block px-6 py-3 bg-[var(--primary)] text-white rounded-lg hover:bg-[#152030] transition-colors"
         >
           Go Home
         </a>

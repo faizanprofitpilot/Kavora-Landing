@@ -258,7 +258,7 @@ export default function Home() {
                     >
                       <Card variant="feature" delay={index * 0.1}>
                         <div className="flex items-start">
-                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--primary)] to-blue-700 flex items-center justify-center mr-4 flex-shrink-0">
+                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--primary)] to-[#152030] flex items-center justify-center mr-4 flex-shrink-0">
                             <Icon className="w-6 h-6 text-white" />
                           </div>
                           <div className="flex-1">
