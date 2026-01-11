@@ -41,10 +41,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">
               The Problem
             </h2>
-            <p className="text-xl md:text-2xl text-[var(--muted-foreground)] mb-4 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-text-muted mb-4 max-w-3xl mx-auto">
               AI governance today is mostly advisory.
             </p>
           </motion.div>
@@ -56,7 +56,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-lg text-[var(--muted-foreground)] mb-6">
+              <p className="text-lg text-text-muted mb-6">
                 Enterprises face growing risk from:
               </p>
               <Card>
@@ -76,7 +76,7 @@ export default function Home() {
                       className="flex items-start"
                     >
                       <AlertTriangle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-[var(--foreground)]">{item}</span>
+                      <span className="text-text">{item}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -86,7 +86,7 @@ export default function Home() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg md:text-xl text-[var(--foreground)] font-semibold mt-8"
+                className="text-lg md:text-xl text-text font-semibold mt-8"
               >
                 Policies exist. Enforcement does not.
               </motion.p>
@@ -134,7 +134,7 @@ export default function Home() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 md:p-8" delay={0}>
+              <Card className="bg-white/10 backdrop-blur-md border-white/20 p-6 md:p-8" delay={0}>
                 <p className="text-sm font-medium text-white/90 mb-5 drop-shadow-sm">
                   With Kavora, organizations can:
                 </p>
@@ -208,10 +208,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">
               How It Works
             </h2>
-            <p className="text-sm text-[var(--muted-foreground)] mb-6 italic">
+            <p className="text-sm text-text-muted mb-6 italic">
               (Conceptually)
             </p>
           </motion.div>
@@ -223,7 +223,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-xl md:text-2xl text-[var(--foreground)] mb-6 text-center">
+              <p className="text-xl md:text-2xl text-text mb-6 text-center">
                 Kavora inserts a governed control plane between AI systems and the resources they interact with.
               </p>
               <div className="space-y-4 mb-6">
@@ -258,17 +258,17 @@ export default function Home() {
                     >
                       <Card variant="feature" delay={index * 0.1}>
                         <div className="flex items-start">
-                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--primary)] to-[#152030] flex items-center justify-center mr-4 flex-shrink-0">
+                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-navy-900 flex items-center justify-center mr-4 flex-shrink-0">
                             <Icon className="w-6 h-6 text-white" />
                           </div>
                           <div className="flex-1">
-                            <div className="text-sm font-semibold text-[var(--primary)] mb-1">
+                            <div className="text-sm font-semibold text-primary mb-1">
                               STEP {item.step}
                             </div>
-                            <h3 className="text-lg font-bold text-[var(--foreground)] mb-2">
+                            <h3 className="text-lg font-bold text-text mb-2">
                               {item.title}
                             </h3>
-                            <p className="text-sm text-[var(--muted-foreground)]">
+                            <p className="text-sm text-text-muted">
                               {item.description}
                             </p>
                           </div>
@@ -280,8 +280,8 @@ export default function Home() {
               </div>
               <Card className="mb-6">
                 <div className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-[var(--primary)] mr-3 mt-0.5 flex-shrink-0" />
-                  <p className="text-[var(--foreground)]">
+                  <CheckCircle2 className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <p className="text-text">
                     Unauthorized actions are blocked or safely degraded
                   </p>
                 </div>
@@ -291,7 +291,7 @@ export default function Home() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg md:text-xl text-[var(--foreground)] text-center"
+                className="text-lg md:text-xl text-text text-center"
               >
                 This approach mirrors how network security evolved from guidelines to firewalls.
               </motion.p>
@@ -328,7 +328,7 @@ export default function Home() {
               <p className="text-lg text-white/90 mb-6 drop-shadow-md">
                 That shift creates new enterprise risk:
               </p>
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <Card className="bg-white/10 backdrop-blur-md border-white/20">
                 <ul className="space-y-4">
                   {[
                     'Execution without approval',
@@ -390,7 +390,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">
               Who Kavora Is For
             </h2>
           </motion.div>
@@ -421,8 +421,8 @@ export default function Home() {
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         className="flex items-start"
                       >
-                        <Icon className="w-5 h-5 text-[var(--primary)] mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-[var(--foreground)]">{item.text}</span>
+                        <Icon className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-text">{item.text}</span>
                       </motion.div>
                     );
                   })}
@@ -466,7 +466,7 @@ export default function Home() {
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+            <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <ul className="space-y-4 mb-6">
                 {[
                   'Governance should be enforceable, not aspirational',
@@ -511,10 +511,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">
               Team
             </h2>
-            <p className="text-lg md:text-xl text-[var(--muted-foreground)] max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-text-muted max-w-3xl mx-auto">
               Built by operators who've lived both security infrastructure and real-world AI deployment.
             </p>
           </motion.div>
@@ -554,13 +554,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">
               Status
             </h2>
-            <p className="text-lg md:text-xl text-[var(--foreground)] mb-4 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-text mb-4 max-w-3xl mx-auto">
               Kavora is currently working with early enterprise design partners.
             </p>
-            <p className="text-lg text-[var(--muted-foreground)] max-w-3xl mx-auto">
+            <p className="text-lg text-text-muted max-w-3xl mx-auto">
               We are validating runtime governance approaches across:
             </p>
           </motion.div>
@@ -571,11 +571,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl border-2 border-[var(--primary)]/30 bg-white p-8 md:p-12 shadow-lg shadow-[var(--primary)]/20"
+              className="rounded-2xl border-2 border-primary/30 bg-surface p-8 md:p-12 shadow-lg shadow-primary/20"
             >
               <div className="flex items-center justify-center mb-6">
-                <Activity className="w-8 h-8 text-[var(--primary)] mr-3" />
-                <h3 className="text-xl font-bold text-[var(--foreground)]">
+                <Activity className="w-8 h-8 text-primary mr-3" />
+                <h3 className="text-xl font-bold text-text">
                   Active Development
                 </h3>
               </div>
@@ -593,8 +593,8 @@ export default function Home() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="flex items-center justify-center"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-[var(--primary)] mr-3 flex-shrink-0" />
-                    <span className="text-[var(--foreground)]">{item}</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                    <span className="text-text">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -628,10 +628,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 whitespace-nowrap text-center mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-6 whitespace-nowrap text-center mx-auto">
               Interested in governing AI at runtime?
             </h2>
-            <p className="text-lg md:text-xl text-[var(--muted-foreground)] mb-8">
+            <p className="text-lg md:text-xl text-text-muted mb-8">
               We are scheduling conversations with enterprise leaders exploring AI governance, security, and responsible deployment.
             </p>
             <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">

@@ -16,7 +16,7 @@ export default function Card({
   variant = 'default',
   delay = 0,
 }: CardProps) {
-  const baseStyles = 'rounded-2xl border border-[var(--border)]/60 bg-[var(--card)] shadow-sm transition-all duration-300';
+  const baseStyles = 'rounded-2xl border border-border/60 bg-surface shadow-sm transition-all duration-300';
   
   const variantStyles = {
     default: 'p-8 md:p-12 hover:shadow-md hover:-translate-y-1',

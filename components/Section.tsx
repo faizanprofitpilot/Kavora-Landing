@@ -16,10 +16,10 @@ export default function Section({
   withDivider = false,
 }: SectionProps) {
   const bgClass = variant === 'muted' 
-    ? 'bg-[var(--muted)]' 
+    ? 'bg-surface-2' 
     : variant === 'image'
     ? 'relative overflow-hidden'
-    : 'bg-[var(--background)]';
+    : 'bg-surface';
 
   return (
     <section id={id} className={`${bgClass} ${className}`}>
@@ -31,7 +31,7 @@ export default function Section({
               backgroundImage: "url('/Alternate%20background.png')",
             }}
           />
-          <div className="absolute inset-0 bg-white/20 z-0" />
+          <div className="absolute inset-0 bg-surface/20 z-0" />
         </>
       )}
       {withDivider && <div className="section-divider relative z-10" />}

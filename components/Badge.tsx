@@ -14,8 +14,8 @@ export default function Badge({
   const baseStyles = 'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium';
   
   const variantStyles = {
-    default: 'bg-[var(--primary)]/10 text-[var(--primary)]',
-    outline: 'border border-[var(--border)] text-[var(--muted-foreground)]',
+    default: 'bg-primary/10 text-primary',
+    outline: 'border border-border text-text-muted',
   };
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`;

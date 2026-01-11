@@ -103,7 +103,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--muted)]">
+    <div className="min-h-screen bg-surface-2">
       <Container className="py-20 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,10 +111,10 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-text mb-4">
             Have a Conversation
           </h1>
-          <p className="text-lg text-[var(--muted-foreground)]">
+          <p className="text-lg text-text-muted">
             Tell us a bit about your environment and what you are trying to govern. We will respond within 1 business day.
           </p>
         </motion.div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-[var(--foreground)] mb-2"
+                  className="block text-sm font-medium text-text mb-2"
                 >
                   Name
                 </label>
@@ -165,10 +165,10 @@ export default function ContactPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] transition-colors ${
+                  className={`w-full px-4 py-3 border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-ring transition-colors ${
                     errors.name
                       ? 'border-red-300 focus:border-red-400'
-                      : 'border-[var(--border)] focus:border-[var(--primary)]'
+                      : 'border-border focus:border-primary'
                   }`}
                   aria-invalid={errors.name ? 'true' : 'false'}
                   aria-describedby={errors.name ? 'name-error' : undefined}
@@ -188,7 +188,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-[var(--foreground)] mb-2"
+                  className="block text-sm font-medium text-text mb-2"
                 >
                   Work Email
                 </label>
@@ -198,10 +198,10 @@ export default function ContactPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] transition-colors ${
+                  className={`w-full px-4 py-3 border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-ring transition-colors ${
                     errors.email
                       ? 'border-red-300 focus:border-red-400'
-                      : 'border-[var(--border)] focus:border-[var(--primary)]'
+                      : 'border-border focus:border-primary'
                   }`}
                   aria-invalid={errors.email ? 'true' : 'false'}
                   aria-describedby={errors.email ? 'email-error' : undefined}
@@ -221,7 +221,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="company"
-                  className="block text-sm font-medium text-[var(--foreground)] mb-2"
+                  className="block text-sm font-medium text-text mb-2"
                 >
                   Company
                 </label>
@@ -231,10 +231,10 @@ export default function ContactPage() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] transition-colors ${
+                  className={`w-full px-4 py-3 border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-ring transition-colors ${
                     errors.company
                       ? 'border-red-300 focus:border-red-400'
-                      : 'border-[var(--border)] focus:border-[var(--primary)]'
+                      : 'border-border focus:border-primary'
                   }`}
                   aria-invalid={errors.company ? 'true' : 'false'}
                   aria-describedby={errors.company ? 'company-error' : undefined}
@@ -254,7 +254,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="role"
-                  className="block text-sm font-medium text-[var(--foreground)] mb-2"
+                  className="block text-sm font-medium text-text mb-2"
                 >
                   Role/Title
                 </label>
@@ -264,10 +264,10 @@ export default function ContactPage() {
                   name="role"
                   value={formData.role}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] transition-colors ${
+                  className={`w-full px-4 py-3 border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-ring transition-colors ${
                     errors.role
                       ? 'border-red-300 focus:border-red-400'
-                      : 'border-[var(--border)] focus:border-[var(--primary)]'
+                      : 'border-border focus:border-primary'
                   }`}
                   aria-invalid={errors.role ? 'true' : 'false'}
                   aria-describedby={errors.role ? 'role-error' : undefined}
@@ -287,7 +287,7 @@ export default function ContactPage() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-[var(--foreground)] mb-2"
+                  className="block text-sm font-medium text-text mb-2"
                 >
                   Message
                 </label>
@@ -297,10 +297,10 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className={`w-full px-4 py-3 border rounded-lg bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] transition-colors resize-none ${
+                  className={`w-full px-4 py-3 border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-ring transition-colors resize-none ${
                     errors.message
                       ? 'border-red-300 focus:border-red-400'
-                      : 'border-[var(--border)] focus:border-[var(--primary)]'
+                      : 'border-border focus:border-primary'
                   }`}
                   aria-invalid={errors.message ? 'true' : 'false'}
                   aria-describedby={errors.message ? 'message-error' : undefined}

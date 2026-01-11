@@ -56,7 +56,7 @@ export default function Header() {
       <nav className={`max-w-6xl mx-auto transition-all duration-500 ${
         scrolled 
           ? 'header-blur py-2 px-6 lg:px-8' 
-          : 'px-4 sm:px-6 lg:px-8 py-0'
+          : 'header-clean px-4 sm:px-6 lg:px-8 py-0'
       }`}>
         <div className={`flex items-center transition-all duration-500 ${
           scrolled ? 'h-16' : 'h-20'
@@ -78,8 +78,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, 'product')}
               className={`transition-colors text-base font-medium ${
                 scrolled
-                  ? 'text-white hover:text-white/80'
-                  : 'text-[var(--muted-foreground)] hover:text-[var(--foreground)]'
+                  ? 'text-neutral-100 hover:text-neutral-200'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               Product
@@ -89,8 +89,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, 'why-now')}
               className={`transition-colors text-base font-medium ${
                 scrolled
-                  ? 'text-white hover:text-white/80'
-                  : 'text-[var(--muted-foreground)] hover:text-[var(--foreground)]'
+                  ? 'text-neutral-100 hover:text-neutral-200'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               Why Now
@@ -100,8 +100,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, 'who-its-for')}
               className={`transition-colors text-base font-medium ${
                 scrolled
-                  ? 'text-white hover:text-white/80'
-                  : 'text-[var(--muted-foreground)] hover:text-[var(--foreground)]'
+                  ? 'text-neutral-100 hover:text-neutral-200'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               Who It's For
@@ -111,8 +111,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, 'team')}
               className={`transition-colors text-base font-medium ${
                 scrolled
-                  ? 'text-white hover:text-white/80'
-                  : 'text-[var(--muted-foreground)] hover:text-[var(--foreground)]'
+                  ? 'text-neutral-100 hover:text-neutral-200'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               Team
@@ -122,8 +122,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, 'status')}
               className={`transition-colors text-base font-medium ${
                 scrolled
-                  ? 'text-white hover:text-white/80'
-                  : 'text-[var(--muted-foreground)] hover:text-[var(--foreground)]'
+                  ? 'text-neutral-100 hover:text-neutral-200'
+                  : 'text-text-muted hover:text-text'
               }`}
             >
               Status
@@ -131,18 +131,46 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex flex-shrink-0">
-            <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-              <Calendar className="w-4 h-4 mr-2" />
-              Have a Conversation
-            </Button>
+            <a 
+              href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                scrolled
+                  ? 'bg-white text-primary hover:bg-neutral-100 focus:ring-primary shadow-sm hover:shadow-md'
+                  : 'bg-primary text-primary-foreground hover:bg-primary-hover focus:ring-primary shadow-sm hover:shadow-md relative overflow-hidden group'
+              }`}
+            >
+              {!scrolled && (
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              )}
+              <span className={`relative z-10 flex items-center`}>
+                <Calendar className="w-4 h-4 mr-2" />
+                Have a Conversation
+              </span>
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto">
-            <Button href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" variant="primary">
-              <Calendar className="w-4 h-4 mr-2" />
-              Have a Conversation
-            </Button>
+            <a 
+              href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                scrolled
+                  ? 'bg-white text-primary hover:bg-neutral-100 focus:ring-primary shadow-sm hover:shadow-md'
+                  : 'bg-primary text-primary-foreground hover:bg-primary-hover focus:ring-primary shadow-sm hover:shadow-md relative overflow-hidden group'
+              }`}
+            >
+              {!scrolled && (
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              )}
+              <span className={`relative z-10 flex items-center`}>
+                <Calendar className="w-4 h-4 mr-2" />
+                Have a Conversation
+              </span>
+            </a>
           </div>
         </div>
       </nav>

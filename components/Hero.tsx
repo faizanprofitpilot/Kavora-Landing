@@ -95,15 +95,12 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/Hero%20background.png')",
+          backgroundImage: "url('/Hero background.png')",
         }}
       />
       
       {/* Dark overlay for text contrast */}
       <div className="absolute inset-0 bg-black/40" />
-      
-      {/* Animated background overlay */}
-      <div className="absolute inset-0 hero-gradient hero-grid opacity-20" />
       
       {/* Cursor glow effect */}
       {!isReducedMotion && !isMobile && (
@@ -123,9 +120,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 drop-shadow-lg break-words"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 break-words"
           >
-            <span className="text-gray-300 font-orbitron inline-block" data-text="Runtime Governance for Enterprise AI">
+            <span className="shiny-navy font-orbitron inline-block" data-text="Runtime Governance for Enterprise AI">
               Runtime Governance for Enterprise AI
             </span>
           </motion.h1>
@@ -134,7 +131,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm md:text-base lg:text-lg font-semibold text-white mb-8 mx-auto leading-tight drop-shadow-md max-w-6xl px-4 sm:px-6 md:px-8"
+            className="text-sm md:text-base lg:text-lg font-semibold text-neutral-200 mb-8 mx-auto leading-tight max-w-6xl px-4 sm:px-6 md:px-8"
           >
             <div className="md:whitespace-nowrap">
               <TypingText 
@@ -148,7 +145,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-sm md:text-base lg:text-lg text-white/90 mb-12 max-w-6xl mx-auto leading-tight font-light drop-shadow-sm"
+            className="text-sm md:text-base lg:text-lg text-neutral-300 mb-12 max-w-6xl mx-auto leading-relaxed font-normal"
           >
             AI agents and vendor-hosted AI systems can act autonomously, call tools, and move data across enterprise boundaries. Most organizations have principles and oversight processes, but no technical control point once AI is deployed.
           </motion.p>
@@ -180,15 +177,15 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                 >
-                  <Card variant="value" delay={0} className="bg-gray-800 border-gray-700">
+                  <Card variant="value" delay={0} className="bg-white/10 backdrop-blur-md border-white/20">
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-12 h-12 rounded-lg bg-[var(--primary)]/10 flex items-center justify-center mb-3">
+                      <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-3">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="font-semibold text-white mb-1">
                         {prop.title}
                       </h3>
-                      <p className="text-sm text-gray-300">
+                      <p className="text-sm text-white/90">
                         {prop.description}
                       </p>
                     </div>

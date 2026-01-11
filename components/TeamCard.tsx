@@ -36,7 +36,7 @@ export default function TeamCard({
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-[var(--border)] shadow-md hover:shadow-lg hover:border-[var(--primary)]/50 transition-all cursor-pointer group"
+            className="relative w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-border shadow-md hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer group"
             aria-label={`${name} on LinkedIn`}
           >
             <Image
@@ -51,24 +51,24 @@ export default function TeamCard({
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-[var(--primary)] transition-colors"
+            className="hover:text-primary transition-colors"
             aria-label={`${name} on LinkedIn`}
           >
-            <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
+            <h3 className="text-2xl font-bold text-text mb-1">
               {name}
             </h3>
           </Link>
-          <p className="text-sm font-medium text-[var(--muted-foreground)] mb-4">
+          <p className="text-sm font-medium text-text-muted mb-4">
             {title}
           </p>
         </div>
 
         <div className="flex-1 mb-6">
-          <p className="text-[var(--foreground)] leading-relaxed mb-3">
+          <p className="text-text leading-relaxed mb-3">
             {bio}
           </p>
           {humanDetail && (
-            <p className="text-sm text-[var(--muted-foreground)] italic leading-relaxed">
+            <p className="text-sm text-text-muted italic leading-relaxed">
               {humanDetail}
             </p>
           )}
@@ -82,12 +82,12 @@ export default function TeamCard({
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-4 pt-4 border-t border-[var(--border)]">
+        <div className="flex items-center justify-center gap-4 pt-4 border-t border-border">
           <Link
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--muted-foreground)] hover:opacity-80 transition-opacity"
+            className="text-text-muted hover:opacity-80 transition-opacity"
             aria-label={`${name} on LinkedIn`}
           >
             <Image
@@ -103,7 +103,7 @@ export default function TeamCard({
               href={twitterUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
+              className="text-text-muted hover:text-primary transition-colors"
               aria-label={`${name} on Twitter`}
             >
               <Twitter className="w-5 h-5" />

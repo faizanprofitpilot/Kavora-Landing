@@ -6,7 +6,7 @@ import Container from './Container';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--background)] border-t border-[var(--border)]">
+    <footer className="bg-bg border-t border-border">
       <Container>
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -20,10 +20,10 @@ export default function Footer() {
                   className="h-10 w-auto object-contain"
                 />
               </Link>
-              <p className="text-[var(--muted-foreground)] text-sm mb-2">
+              <p className="text-text-muted text-sm mb-2">
                 Runtime Governance for Enterprise AI
               </p>
-              <p className="text-[var(--muted-foreground)] text-sm">New York, NY</p>
+              <p className="text-text-muted text-sm">New York, NY</p>
             </div>
             
             <div className="flex justify-center md:justify-end">
