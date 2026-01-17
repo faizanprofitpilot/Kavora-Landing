@@ -157,7 +157,7 @@ export default function Header() {
               href="https://outlook.office.com/book/KavoraRuntimeAIGovernanceIntro@shwatech.com/" 
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+              className={`inline-flex items-center justify-center px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 whitespace-nowrap ${
                 scrolled
                   ? 'bg-white text-primary hover:bg-neutral-100 focus:ring-primary shadow-sm hover:shadow-md'
                   : 'bg-primary text-primary-foreground hover:bg-primary-hover focus:ring-primary shadow-sm hover:shadow-md relative overflow-hidden group'
@@ -167,8 +167,9 @@ export default function Header() {
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               )}
               <span className={`relative z-10 flex items-center`}>
-                <Calendar className="w-4 h-4 mr-2" />
-                Have a Conversation
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0" />
+                <span className="hidden sm:inline">Have a Conversation</span>
+                <span className="sm:hidden">Contact</span>
               </span>
             </a>
           </div>

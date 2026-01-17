@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Orbitron, Inter } from 'next/font/google';
+import { Orbitron, IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -11,9 +11,10 @@ const orbitron = Orbitron({
   display: 'swap',
 });
 
-const inter = Inter({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-ibm-plex-sans',
   display: 'swap',
 });
 
@@ -38,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${inter.variable}`}>
-      <body className={inter.className}>
+    <html lang="en" className={`${orbitron.variable} ${ibmPlexSans.variable}`}>
+      <body className={ibmPlexSans.className}>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -74,7 +74,7 @@ const config: Config = {
         'card-foreground': 'var(--card-foreground)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-ibm-plex-sans)', 'system-ui', 'sans-serif'],
         orbitron: ['var(--font-orbitron)', 'sans-serif'],
       },
     },
